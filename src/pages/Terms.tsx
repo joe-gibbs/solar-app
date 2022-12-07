@@ -84,6 +84,7 @@ export const Terms = () => {
                 <a
                   href="https://www.termsfeed.com/terms-conditions-generator/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   TermsFeed Terms and Conditions Generator
                 </a>

@@ -10,7 +10,7 @@ export const Home = () => {
 
   useEffect(() => {
     setBarChartWidth(containerRef.current?.clientWidth ?? 500);
-  }, [containerRef.current]);
+  }, []);
 
   return (
     <PageShell title="Home - Solar">
