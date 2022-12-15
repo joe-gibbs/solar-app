@@ -21,12 +21,12 @@ export const GetStarted = () => {
               <Input mb="2" placeholder="Name"></Input>
               <Input mb="2" placeholder="Email"></Input>
               <Input mb="2" placeholder="Phone number"></Input>
+              <Flex justify="end">
+                <Button type="submit" colorScheme="blue">
+                  Sign in
+                </Button>
+              </Flex>
             </form>
-            <Flex justify="end">
-              <Button onClick={() => {}} colorScheme="blue">
-                Sign in
-              </Button>
-            </Flex>
             <Text mt="2">
               Don't have an account? Take a look at{" "}
               <Link to="/#pricing" style={{ textDecoration: "underline" }}>
