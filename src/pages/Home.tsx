@@ -27,17 +27,23 @@ export const Home = () => {
           loop
           muted
         />
-
-        <Text color="white" fontWeight="bold" as="h1" fontSize="7xl">
-          The future of home automation
-        </Text>
+        <Box maxW="768px" p="3" backgroundColor="blackAlpha.500" color="white">
+          <Text fontWeight="bold" as="h1" fontSize="7xl">
+            The future of home automation
+          </Text>
+          <Text fontSize="6xl" mb="6" fontWeight="semibold">
+            Save up to 60% on your power bill
+          </Text>
+          <Text fontSize="2xl" mb="6" fontWeight="semibold">
+            [App name] saves you money by automating your home systems to run
+            your heating and cooling when power is the cheapest. Get home to a
+            cool house in the summer and a cool $500 extra in your pocket.
+          </Text>
+        </Box>
       </Flex>
       <Box bg="gray.50">
         <Container maxW="container.xl" ref={containerRef} minH="100vh">
           <Box pt="16">
-            <Text fontSize="6xl" mb="6" fontWeight="semibold">
-              Save up to 60% on your power bill
-            </Text>
             <BarChart width={barChartWidth} height={500} />
           </Box>
 
@@ -48,16 +54,16 @@ export const Home = () => {
             <Flex>
               <Box mr="16" maxW="60%">
                 <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deleniti ipsam, eligendi ipsum dolores dicta, dolor eveniet
-                  quo doloremque voluptas quasi a quisquam blanditiis sunt vel?
-                  Nam ea reprehenderit laborum. Maxime.
+                  Using a proprietary algorithm, our system will determine what
+                  the best time is to run your heating and cooling. It will take
+                  into account temperature, prices of electricity and many other
+                  variables.
                 </Text>
                 <Text mt="4">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam,
-                  et veniam laboriosam laudantium quisquam dolorem odio
-                  explicabo nesciunt, reprehenderit error nisi. Dolores nesciunt
-                  ad natus beatae itaque harum aliquam ipsa.
+                  By scheduling your biggest power users, Zen Solar can reduce
+                  your energy consumption by up to 40%. If you're looking for
+                  hundreds of dollars less on your power bills, Zen Solar has
+                  your solution.
                 </Text>
                 <Text mt="4">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -71,7 +77,12 @@ export const Home = () => {
           </Box>
 
           <Box id="pricing" mt="16">
-            <Text fontSize="6xl" mb="6" fontWeight="semibold">
+            <Text
+              textAlign="center"
+              fontSize="6xl"
+              mb="6"
+              fontWeight="semibold"
+            >
               Pricing
             </Text>
             <Pricing />

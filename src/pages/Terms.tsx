@@ -31,7 +31,7 @@ export const Terms = () => {
               <p>
                 <strong>Application</strong> means the software program provided
                 by the Company downloaded by You on any electronic device, named
-                Test App
+                Zen Solar
               </p>
             </li>
             <li>
@@ -58,9 +58,9 @@ export const Terms = () => {
             </li>
             <li>
               <p>
-                <strong>Company</strong> (referred to as either "the Company",
-                "We", "Us" or "Our" in this Agreement) refers to Test App
-                Company, 1 Fake St Melbourne VIC.
+                <strong>Zen Solar</strong> (referred to as either "the Company",
+                "We", "Us" or "Our" in this Agreement) refers to Zen Solar, 1351
+                Toorak Rd Camberwell VIC.
               </p>
             </li>
             <li>
@@ -300,23 +300,6 @@ export const Terms = () => {
             do not agree to the new terms, in whole or in part, please stop
             using the website and the Service.
           </p>
-          <h1>Contact Us</h1>
-          <p>
-            If you have any questions about these Terms and Conditions, You can
-            contact us:
-          </p>
-          <ul>
-            <li>
-              By visiting this page on our website:{" "}
-              <a
-                href="company/contact"
-                rel="external nofollow noopener"
-                target="_blank"
-              >
-                company/contact
-              </a>
-            </li>
-          </ul>
         </Container>
       </Container>
     </PageShell>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Group } from "@visx/group";
 import { BarGroup } from "@visx/shape";
-import { AxisBottom } from "@visx/axis";
+import { AxisBottom, AxisLeft } from "@visx/axis";
 import { scaleBand, scaleLinear, scaleOrdinal } from "@visx/scale";
 import { timeParse, timeFormat } from "d3-time-format";
 
@@ -31,46 +31,71 @@ const data: {
   after: string;
 }[] = [
   {
-    date: "2022-11-03",
-    before: "2.3",
-    after: "1.3",
+    date: "2022-01-01",
+    before: "110",
+    after: "76",
   },
   {
-    date: "2022-11-04",
-    before: "2.3",
-    after: "1.3",
+    date: "2022-02-01",
+    before: "98",
+    after: "78",
   },
   {
-    date: "2022-11-05",
-    before: "2.3",
-    after: "1.3",
+    date: "2022-03-01",
+    before: "74",
+    after: "61",
   },
   {
-    date: "2022-11-06",
-    before: "2.3",
-    after: "1.3",
+    date: "2022-04-01",
+    before: "70",
+    after: "45",
   },
   {
-    date: "2022-11-07",
-    before: "2.3",
-    after: "1.3",
+    date: "2022-05-01",
+    before: "83",
+    after: "58",
   },
   {
-    date: "2022-11-08",
-    before: "2.3",
-    after: "1.3",
+    date: "2022-06-01",
+    before: "90",
+    after: "78",
   },
   {
-    date: "2022-11-09",
-    before: "2.3",
-    after: "1.3",
+    date: "2022-07-01",
+    before: "97",
+    after: "60",
+  },
+  {
+    date: "2022-08-01",
+    before: "121",
+    after: "82",
+  },
+  {
+    date: "2022-09-01",
+    before: "87",
+    after: "66",
+  },
+  {
+    date: "2022-10-01",
+    before: "65",
+    after: "50",
+  },
+  {
+    date: "2022-11-01",
+    before: "57",
+    after: "45",
+  },
+  {
+    date: "2022-12-01",
+    before: "89",
+    after: "70",
   },
 ];
 const keys = Object.keys(data[0]).filter((d) => d !== "date") as CityName[];
 const defaultMargin = { top: 40, right: 0, bottom: 40, left: 0 };
 
 const parseDate = timeParse("%Y-%m-%d");
-const format = timeFormat("%b %d");
+const format = timeFormat("%b");
 const formatDate = (date: string) => format(parseDate(date) as Date);
 
 // accessors
@@ -81,10 +106,12 @@ const dateScale = scaleBand<string>({
   domain: data.map(getDate),
   padding: 0.2,
 });
+
 const cityScale = scaleBand<string>({
   domain: keys,
   padding: 0.1,
 });
+
 const tempScale = scaleLinear<number>({
   domain: [
     0,
@@ -122,6 +149,21 @@ export const BarChart = ({
         height={height}
         fill={background}
         rx={14}
+      />
+      <AxisLeft
+        stroke={green}
+        tickStroke={green}
+        hideAxisLine
+        hideTicks
+        tickLabelProps={() => ({
+          fill: green,
+          fontSize: 11,
+          textAnchor: "middle",
+        })}
+        top={margin.top}
+        tickFormat={(v) => "$" + v}
+        scale={tempScale}
+        left={20}
       />
       <Group top={margin.top} left={margin.left}>
         <BarGroup

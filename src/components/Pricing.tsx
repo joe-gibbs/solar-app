@@ -50,7 +50,7 @@ export const Pricing = () => {
             sm: 0,
           }}
         >
-          <Flex
+          {/*<Flex
             flex={{
               sm: 1,
               lg: "initial",
@@ -153,7 +153,7 @@ export const Pricing = () => {
                 </chakra.a>
               </Box>
             </VStack>
-          </Flex>
+          </Flex>*/}
 
           <Flex
             flex={{
@@ -184,16 +184,13 @@ export const Pricing = () => {
               w="full"
               shadow="xl"
             >
-              <chakra.span fontSize="3xl" fontWeight="bold">
-                Medium
-              </chakra.span>
               <HStack spacing={3}>
                 <chakra.span
                   fontWeight="bold"
                   fontSize="6xl"
                   textShadow="2px 0 currentcolor"
                 >
-                  $xxx
+                  $50
                 </chakra.span>
                 <chakra.span
                   alignSelf="center"
@@ -250,7 +247,7 @@ export const Pricing = () => {
             </VStack>
           </Flex>
 
-          <Flex
+          {/*<Flex
             flex={{
               sm: 1,
               lg: "initial",
@@ -356,7 +353,7 @@ export const Pricing = () => {
                 </chakra.a>
               </Box>
             </VStack>
-          </Flex>
+          </Flex>*/}
         </Flex>
       </Box>
     </Flex>
