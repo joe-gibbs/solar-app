@@ -18,9 +18,21 @@ export const GetStarted = () => {
               Get started
             </Text>
             <form name="contact" method="POST" data-netlify="true">
-              <Input mb="2" placeholder="Name"></Input>
-              <Input mb="2" placeholder="Email"></Input>
-              <Input mb="2" placeholder="Phone number"></Input>
+              <input type="hidden" name="form-name" value="contact" />
+
+              <Input name="name" mb="2" placeholder="Name"></Input>
+              <Input
+                name="email"
+                mb="2"
+                type="email"
+                placeholder="Email"
+              ></Input>
+              <Input
+                name="phone"
+                mb="2"
+                type="tel"
+                placeholder="Phone number"
+              ></Input>
               <Flex justify="end">
                 <Button type="submit" colorScheme="blue">
                   Sign in
