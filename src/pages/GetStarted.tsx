@@ -1,5 +1,4 @@
 import { Box, Button, Flex, Input, Text } from "@chakra-ui/react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { PageShell } from "../components/PageShell";
 
